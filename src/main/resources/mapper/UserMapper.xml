@@ -21,7 +21,7 @@
             <result property="sign" column="sign" jdbcType="VARCHAR"/>
             <result property="voice" column="voice" jdbcType="INTEGER"/>
             <result property="music" column="music" jdbcType="INTEGER"/>
-            <result property="registertime" column="registerTime" jdbcType="BIGINT"/>
+            <result property="registertime" column="registertime" jdbcType="BIGINT"/>
             <result property="lastlogin" column="lastlogin" jdbcType="BIGINT"/>
             <result property="loginday" column="loginday" jdbcType="INTEGER"/>
             <result property="platform" column="platform" jdbcType="VARCHAR"/>
@@ -35,7 +35,7 @@
         level,exp,viplevel,
         vipexp,gold,silver,
         copper,sign,voice,
-        music,registerTime,lastlogin,
+        music,registertime,lastlogin,
         loginday,platform,ip,
         country
     </sql>
@@ -56,33 +56,33 @@
                           sign,
                           voice,
                           music,
-                          registerTime,
+                          registertime,
                           lastlogin,
                           loginday,
                           platform,
                           ip,
                           country)
-        values (uid = #{uid,jdbcType=VARCHAR},
-                nickname = #{nickname,jdbcType=VARCHAR},
-                account = #{account,jdbcType=VARCHAR},
-                password = #{password,jdbcType=VARCHAR},
-                phone = #{phonenumber,jdbcType=VARCHAR},
-                address = #{address,jdbcType=VARCHAR},
-                level = #{level,jdbcType=INTEGER},
-                exp = #{exp,jdbcType=BIGINT},
-                viplevel = #{vip,jdbcType=INTEGER},
-                gold = #{gold,jdbcType=BIGINT},
-                silver = #{silver,jdbcType=BIGINT},
-                copper = #{copper,jdbcType=BIGINT},
-                sign = #{sign,jdbcType=VARCHAR},
-                voice = #{voice,jdbcType=INTEGER},
-                music = #{music,jdbcType=INTEGER},
-                registerTime = #{registerTime,jdbcType=BIGINT},
-                lastlogin = #{lastlogin,jdbcType=BIGINT},
-                loginday = #{loginday,jdbcType=INTEGER},
-                platform = #{platform,jdbcType=VARCHAR},
-                ip = #{ip,jdbcType=VARCHAR},
-                country = #{country,jdbcType=VARCHAR});
+        values (#{uid,jdbcType=VARCHAR},
+                #{nickname,jdbcType=VARCHAR},
+                #{account,jdbcType=VARCHAR},
+                #{password,jdbcType=VARCHAR},
+                #{phone,jdbcType=VARCHAR},
+                #{address,jdbcType=VARCHAR},
+                #{level,jdbcType=INTEGER},
+                #{exp,jdbcType=BIGINT},
+                #{viplevel,jdbcType=INTEGER},
+                #{gold,jdbcType=BIGINT},
+                #{silver,jdbcType=BIGINT},
+                #{copper,jdbcType=BIGINT},
+                #{sign,jdbcType=VARCHAR},
+                #{voice,jdbcType=INTEGER},
+                #{music,jdbcType=INTEGER},
+                #{registertime,jdbcType=BIGINT},
+                #{lastlogin,jdbcType=BIGINT},
+                #{loginday,jdbcType=INTEGER},
+                #{platform,jdbcType=VARCHAR},
+                #{ip,jdbcType=VARCHAR},
+                #{country,jdbcType=VARCHAR});
     </insert>
     <update id="updateUser" parameterType="com.shortvideoserver.entity.User">
         update user
@@ -99,8 +99,8 @@
             <if test="password != null">
                 password = #{password,jdbcType=VARCHAR},
             </if>
-            <if test="phonenumber != null">
-                phonenumber = #{phonenumber,jdbcType=VARCHAR},
+            <if test="phone != null">
+                phone = #{phone,jdbcType=VARCHAR},
             </if>
             <if test="address != null">
                 address = #{address,jdbcType=VARCHAR},
@@ -111,8 +111,8 @@
             <if test="exp != null">
                 exp = #{exp,jdbcType=BIGINT},
             </if>
-            <if test="vip != null">
-                vip = #{vip,jdbcType=INTEGER},
+            <if test="viplevel != null">
+                viplevel = #{viplevel,jdbcType=INTEGER},
             </if>
             <if test="gold != null">
                 gold = #{gold,jdbcType=BIGINT},
@@ -132,8 +132,8 @@
             <if test="music != null">
                 music = #{music,jdbcType=INTEGER},
             </if>
-            <if test="registerTime != null">
-                registerTime = #{registerTime,jdbcType=BIGINT},
+            <if test="registertime != null">
+                registertime = #{registertime,jdbcType=BIGINT},
             </if>
             <if test="lastlogin != null">
                 lastlogin = #{lastlogin,jdbcType=BIGINT},

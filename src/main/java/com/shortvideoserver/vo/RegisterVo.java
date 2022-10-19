@@ -34,6 +34,8 @@ public class RegisterVo extends User {
         }
 
         user.setUid(uid);
+        user.setAccount(registerVo.getAccount());
+        user.setPassword(registerVo.getPassword());
         //todo 以后做随机
         user.setNickname("以后做随机");
         user.setPhone(registerVo.getPhone());
@@ -45,6 +47,7 @@ public class RegisterVo extends User {
         user.setSilver(0L);
         user.setCopper(0L);
         user.setSign("还没有签名哦~");
+        user.setVipexp(0);
         user.setVoice(1);
         user.setMusic(1);
         user.setRegistertime(System.currentTimeMillis());

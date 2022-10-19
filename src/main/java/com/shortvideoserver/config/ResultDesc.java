@@ -17,4 +17,5 @@ public class ResultDesc {
     public static final String LOGIN_PASSWORD_ERROR = "密码错误";
     public static final String REGISTER_PASSWORD_ERROR = "两次密码输入不一致";
     public static final String REGISTER_FAIL_ACCOUNT_ERROR = "注册账号异常，请确认账号是否填写正确";
+    public static final String REGISTER_FAIL_USER_ALREADY_REGISTER = "此账号已注册，可以前往登录";
 }

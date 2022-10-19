@@ -32,7 +32,7 @@ public class UserController {
     }
 
     @RequestMapping("/register")
-    public String doRegister(RegisterVo registerVo) {
+    public String doRegister(@RequestBody RegisterVo registerVo) {
         BackClient register = userService.register(registerVo);
         return register.toJson();
     }

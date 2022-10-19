@@ -18,7 +18,7 @@ CREATE TABLE `user`
     `sign`         varchar(128)         DEFAULT '' COMMENT '签名',
     `voice`        int(11)              DEFAULT 1 COMMENT '声音开关',
     `music`        int(11)              DEFAULT 1 COMMENT '音乐开关',
-    `registerTime` bigint(20)           DEFAULT '0' COMMENT '注册时间',
+    `registertime` bigint(20)           DEFAULT '0' COMMENT '注册时间',
     `lastlogin`    bigint(20)           DEFAULT '0' COMMENT '最后一次登陆时间',
     `loginday`     int(11)              DEFAULT '0' COMMENT '累计登陆天数',
     `platform`     varchar(20)          DEFAULT '' COMMENT '渠道标识',

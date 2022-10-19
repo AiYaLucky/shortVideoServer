@@ -13,6 +13,7 @@ public class ResultCode {
     public static final Integer LOGIN_PASSWORD_ERROR = 2;
     public static final Integer LOGIN_SUCCESS = 200;
     public static final Integer REGISTER_SUCCESS = 200;
-    public static final Integer REGISTER_PASSWARD_ERROR = 3;
+    public static final Integer REGISTER_PASSWORD_ERROR = 3;
     public static final Integer REGISTER_FAIL_ACCOUNT_ERROR = 4;
+    public static final Integer REGISTER_FAIL_USER_ALREADY_REGISTER = 5;
 }

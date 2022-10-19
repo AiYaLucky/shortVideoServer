@@ -72,8 +72,14 @@ public class UserServiceImpl implements UserService{
         /* 用户数据校验 */
         //两次输入密码校验
         if (!registerVo.getPassword().equals(registerVo.getRePassword())){
-            toClient.setCode(ResultCode.REGISTER_PASSWARD_ERROR);
+            toClient.setCode(ResultCode.REGISTER_PASSWORD_ERROR);
             toClient.setDesc(ResultDesc.REGISTER_PASSWORD_ERROR);
+            return toClient;
+        }
+
+        if (ALL_USERS.containsKey(registerVo.getAccount())){
+            toClient.setCode(ResultCode.REGISTER_FAIL_USER_ALREADY_REGISTER);
+            toClient.setDesc(ResultDesc.REGISTER_FAIL_USER_ALREADY_REGISTER);
             return toClient;
         }
 

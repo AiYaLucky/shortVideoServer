@@ -1,6 +1,5 @@
 package com.shortvideoserver.entity;
 
-import java.io.Serial;
 import java.io.Serializable;
 
 /**
@@ -31,7 +30,7 @@ public class User implements Serializable {
     /**
      * 手机
      */
-    private Integer phone;
+    private Long phone;
 
     /**
      * 地址
@@ -118,7 +117,6 @@ public class User implements Serializable {
      */
     private String country;
 
-    @Serial
     private static final long serialVersionUID = 1L;
 
     /**
@@ -180,14 +178,14 @@ public class User implements Serializable {
     /**
      * 手机
      */
-    public Integer getPhone() {
+    public Long getPhone() {
         return phone;
     }
 
     /**
      * 手机
      */
-    public void setPhone(Integer phone) {
+    public void setPhone(Long phone) {
         this.phone = phone;
     }
 
